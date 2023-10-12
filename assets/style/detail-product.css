@@ -1,9 +1,13 @@
 .img-admin {
-  width: 24px !important;
-  height: 24px !important;
+  width: 40px !important;
+  height: 40px !important;
   overflow: hidden;
 }
 
 .object-position-center {
   object-position: center center !important;
+}
+
+.line-height {
+  line-height: 40px;
 }
