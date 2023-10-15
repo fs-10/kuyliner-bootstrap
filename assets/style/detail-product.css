@@ -1,6 +1,11 @@
+:root {
+  --orange: #FFC836;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
+
 
 .img-admin {
   width: 40px !important;
@@ -20,6 +25,18 @@ body {
   width: 200px;
 }
 
+.bi-star-fill {
+  color: var(--orange);
+}
+
+.b-radius-5px {
+  border-radius: 5px !important;
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
 /* Rating Style */
 label[for="rating"] input {
   position: absolute;
@@ -30,12 +47,6 @@ label[for="rating"] input {
 
 label[for="rating"] i {
   cursor: pointer;
-}
-
-.checked {
-  color: yellow;
-  /* background-color: yellow; */
-  /* fill: yellow; */
 }
 
 
