@@ -37,6 +37,11 @@ body {
   background-color: var(--orange);
 }
 
+.size-profile {
+  width: 150px !important;
+  height: 150px !important;
+}
+
 /* Rating Style */
 label[for="rating"] input {
   position: absolute;
