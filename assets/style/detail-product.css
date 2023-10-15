@@ -15,3 +15,28 @@ body {
 .line-height {
   line-height: 40px;
 }
+
+.width-200 {
+  width: 200px;
+}
+
+/* Rating Style */
+label[for="rating"] input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+label[for="rating"] i {
+  cursor: pointer;
+}
+
+.checked {
+  color: yellow;
+  /* background-color: yellow; */
+  /* fill: yellow; */
+}
+
+
+/* End Rating Style */
