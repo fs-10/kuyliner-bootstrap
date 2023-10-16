@@ -1,0 +1,63 @@
+:root {
+  --orange: #FFC836;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.img-admin {
+  width: 40px !important;
+  height: 40px !important;
+  overflow: hidden;
+}
+
+.object-position-center {
+  object-position: center center !important;
+}
+
+.line-height {
+  line-height: 40px;
+}
+
+.width-200 {
+  width: 200px;
+}
+
+.bi-star-fill {
+  color: var(--orange);
+}
+
+.b-radius-5px {
+  border-radius: 5px !important;
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
+.size-profile {
+  width: 150px !important;
+  height: 150px !important;
+}
+
+.size-reviewer {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+/* Rating Style */
+label[for="rating"] input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+label[for="rating"] i {
+  cursor: pointer;
+}
+
+
+/* End Rating Style */
