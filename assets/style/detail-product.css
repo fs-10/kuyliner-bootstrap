@@ -42,6 +42,11 @@ body {
   height: 150px !important;
 }
 
+.size-reviewer {
+  width: 100px !important;
+  height: 100px !important;
+}
+
 /* Rating Style */
 label[for="rating"] input {
   position: absolute;
