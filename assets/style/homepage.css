@@ -11,14 +11,6 @@ body {
   background-position: 88%;
 }
 
-#logo {
-  width: 10rem;
-}
-
-.card-img-top {
-  border-radius: 1rem;
-}
-
 .card-title {
   font-size: 0.8rem;
   font-weight: 600;
@@ -42,11 +34,35 @@ body {
   width: 1.5rem;
 }
 
+/* FOOTER START */
+#footer a {
+  font-size: 0.9rem;
+  font-weight: 350;
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer p {
+  color: white;
+  font-size: 70%;
+}
+
+#footer h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffc836;
+}
+
+.icon-footer {
+  color: #fff;
+}
+/* FOOTER END */
+
 /* RESPONSIVE */
 /* LAPTOP */
-@media (max-width: 1366px) {
+@media (max-width: 768px) {
   html {
-    font-size: 75%;
+    font-size: 62.5%;
   }
 }
 
