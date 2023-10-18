@@ -15,27 +15,43 @@
 <body class="overflow-x-hidden">
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
-      <div class="container-fluid container-xl">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Article</a>
-            </li>
-          </ul>
-        </div>
+    <nav
+    id="navbar"
+    class="navbar navbar-expand-lg navbar-light bg-light shadow-sm position-fixed z-3 w-100 top-0"
+  >
+    <div class="container">
+      <img
+        id="logo"
+        src="../assets/img/homepage/logo-kuyliner.png"
+        alt="logokuyliner"
+        width="90rem"
+      />
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Artikel</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
   </header>
 
-  <main>
+  <main class="mt-5 pt-5">
     <!-- Start Card Detail -->
     <section class="container-xl container-md container-sm">
       <div class="row card d-xl-flex justify-content-xl-center my-3">
@@ -297,7 +313,55 @@
   </main>
 
   <footer>
-    
+    <section
+    id="footer"
+    class="container-fluid py-4"
+    style="background-color: #232023"
+  >
+    <div class="container d-flex justify-content-between text-white">
+      <div class="col-md-10">
+        <img
+          src="../assets/img/homepage/logo-kuyliner.png"
+          alt="logokuyliner"
+          width="90rem"
+        />
+        <p>
+          Membagikan pengalaman terbaik bagi para <br />
+          UMKM dan Konsumen
+        </p>
+        <h3 class="text-warning">Kontak Kami</h3>
+        <a href="#" class="text-decoration-none text-white">kuylinerbusiness@gmail.com</a>
+        <p>+62 812 3123 782781</p>
+      </div>
+      <div id="logo-skilvul" class="col-md">
+        <img
+          src="../assets/img/homepage/logo-skilvul.png"
+          alt="logo-skilvul"
+          width="80%"
+        />
+      </div>
+    </div>
+    <div
+      id="line"
+      class="container mb-2"
+      style="border-top: 2px solid #fff"
+    ></div>
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="col-md-10">
+        <p>
+          <i class="bi bi-c-circle"></i> 2023 Kuyliner. All rights reserved.
+          Made with <span><i class="bi bi-heart-fill"></i></span> in Indonesia
+        </p>
+      </div>
+      <div class="col-md d-flex gap-3">
+        <h2><i class="icon-footer bi bi-instagram text-white"></i></h2>
+        <h2><i class="icon-footer bi bi-facebook text-white"></i></h2>
+        <h2><i class="icon-footer bi bi-twitter-x text-white"></i></h2>
+        <h2><i class="icon-footer bi bi-discord text-white"></i></h2>
+        <h2><i class="icon-footer bi bi-telegram text-white"></i></h2>
+      </div>
+    </div>
+  </section>
   </footer>
   
   
