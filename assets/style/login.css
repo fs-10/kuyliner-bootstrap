@@ -159,9 +159,3 @@ a {
     width: 173px;
     height: 29px;
 }
-@media screen and (max-width: 500px) {
-    .login-right {
-    margin: 0 ;
-    
-}
-}
