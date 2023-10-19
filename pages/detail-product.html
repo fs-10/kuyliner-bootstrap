@@ -40,7 +40,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="../homepage.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Artikel</a>
@@ -55,56 +55,57 @@
     <!-- Start Card Detail -->
     <section class="container-xl container-md container-sm">
       <div class="row card d-xl-flex justify-content-xl-center my-3">
-        <div class="my-3">
+        <div id="section-detail-card" class="my-3">
           <div class="row g-0">
             <div class="col-xl-5 col-lg-6">
-              <img src="../assets/img/detail-product/product-1.png" class="img-fluid rounded h-100 w-100">
+              <img id="img-product" src="" class="img-fluid rounded h-100 w-100">
             </div>
             <div class="col-xl-7 col-lg-6">
               <div class="card-body">
-                <h5 class="card-title fs-3 mb-3 fw-bold">Nasi Goreng</h5>
+                <h5 id="name-product" class="card-title fs-3 mb-3 fw-bold"></h5>
                 <p class="d-flex flex-row gap-2 mb-2">
-                  <span class="d-flex justify-content-center border border-black img-admin rounded-5">
+                  <!-- <span class="d-flex justify-content-center border border-black img-admin rounded-5">
                     <img src="../assets/img/detail-product/profile-admin.png" class="w-100 object-fit-cover">
-                  </span>
-                  <span class="line-height fw-bolder">Mala Kitchen</span>
+                  </span> -->
+                  <span id="name-company" class="line-height fw-bolder"></span>
                 </p>
                 <p class="d-flex gap-1 align-content-center fs-6 m-0">
-                  <i class="bi bi-geo-alt fs-4"></i><span class="line-height">Jakarta Timur</span>
+                  <i class="bi bi-geo-alt fs-4"></i>
+                  <span id="company-location" class="line-height" ></span>
                 </p>
                 <div class="row">
                   <div class="col-5 col-md-3 col-xl-5 col-lg-6">
                     <p class="d-flex gap-1 align-content-center fs-6 m-0">
                       <i class="bi bi-clock fs-4"></i>
-                      <span class="line-height">08.00 - 20.00</span>
+                      <span id="open-hour-company" class="line-height"></span>
                     </p>
                     <p class="d-flex gap-1 align-content-center fs-6 m-0">
                       <i class="bi bi-cash-stack fs-4"></i>
-                      <span class="line-height">Rp.<span>40.000</span></span>
+                      <span class="line-height">Rp.<span id="price-product"></span></span>
                     </p>
                   </div>
                   <div class="col-5">
                     <p class="d-flex gap-1 align-content-center fs-6 m-0">
                       <i class="bi bi-calendar-date fs-4"></i>
-                      <span class="line-height">Senin - Jum'at</span>
+                      <span id="open-day-company" class="line-height"></span>
                     </p>
                     <p class="d-flex gap-1 align-content-center fs-6 m-0">
                       <i class="bi bi-telephone fs-4"></i>
-                      <span class="line-height">+628123123123</span>
+                      <span id="number-phone-company" class="line-height"></span>
                     </p>
                   </div>
                 </div>
 
                 <div class="row my-1">
                   <div class="col">
-                    <div class="rating-stars fs-2 d-inline mr-2">
+                    <div id="rating" class="rating-stars fs-2 d-inline mr-2">
+                      <!-- <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i> -->
                     </div>
-                    <span class="fs-4">4.8/5</span>
+                    <!-- <span class="fs-4">4.8/5</span> -->
                   </div>
                 </div>
 
@@ -119,8 +120,8 @@
           </div>
         </div>
 
-        <div id="gmaps" class="col-12 mb-4">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15841.973189575778!2d107.8228575!3d-6.9509891999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c561bd466d51%3A0xd2803279a5d5e520!2sPerumahan%20PUTERACO%20INDAH%20Cimanggung!5e0!3m2!1sid!2sid!4v1697029542606!5m2!1sid!2sid" height="450" class="w-100 rounded-2 border-1"></iframe>
+        <div class="col-12 mb-4">
+          <iframe id="gmaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15841.973189575778!2d107.8228575!3d-6.9509891999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c561bd466d51%3A0xd2803279a5d5e520!2sPerumahan%20PUTERACO%20INDAH%20Cimanggung!5e0!3m2!1sid!2sid!4v1697029542606!5m2!1sid!2sid" height="450" class="w-100 rounded-2 border-1"></iframe>
         </div>
       </div>
     </section>
@@ -197,7 +198,7 @@
     <!-- End Form Input Review -->
 
     <!-- Start Reviewer -->
-    <section class="container">
+    <section class="container my-5 pb-5">
       <div class="row">
         <div class="col-12">
           <h3>Ulasan Pengunjung</h3>
