@@ -1,13 +1,6 @@
 const labelRating = document.querySelector('label[for="rating"]');
 const getStarsRating = labelRating.getElementsByTagName('i');
 
-
-// ratings.forEach(e => {
-//   e.addEventListener('click', (getValue) => {
-//     console.log(getValue);
-//   });
-// });
-
 for (let i = 0; i < getStarsRating.length; i++) {
   getStarsRating[i].addEventListener('click', () => {
 
@@ -16,3 +9,4 @@ for (let i = 0; i < getStarsRating.length; i++) {
 
   });
 }
+
