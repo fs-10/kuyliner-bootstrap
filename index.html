@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="assets/style/homepage.css" />
+
+    <title>Homepage | Kuyliner</title>
+  </head>
+  <body>
+    <!-- NAVBAR START -->
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg navbar-light bg-light shadow-sm"
+    >
+      <div class="container">
+        <img
+          id="logo"
+          src="assets/img/homepage/logo-kuyliner.png"
+          alt="logokuyliner"
+          width="90rem"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Artikel</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- NAVBAR END -->
+
+    <!-- IMAGE SECTION START -->
+    <section id="hero-image">
+      <img src="assets/img/homepage/hero.jpg" alt="hero" />
+    </section>
+    <!-- IMAGE SECTION END -->
+
+    <!-- HERO CONTENT START -->
+    <section id="hero-about" class="container bg-light mt-3">
+      <div class="row justify-content-between p-1 bg-light">
+        <div class="row-about align-self-center col-md-6 pt-4">
+          <h2 class="fs-2 fw-semibold text-warning">Halo, Selamat Datang</h2>
+          <h1 class="text-dark" style="font-size: 2.8rem; font-weight: 550">
+            Menu Varian Kuliner Untuk <br />
+            Pecinta Makanan
+          </h1>
+          <p class="fs-6">
+            Kuyliner memberikan pengalaman rasa <br />
+            yang terbaik untuk anda. Daftarkan Sebagai Pengguna Untuk Mencari
+            Citra Rasa Dari Hidangan UMKM Indonesia.
+          </p>
+          <div id="button-hero-about">
+            <button
+              class="btn fw-bolder btn-warning btn-lg"
+              style="font-size: 1rem"
+            >
+            <a href="./pages/login.html" class="text-decoration-none text-white">Masuk</a>
+            </button>
+            <button
+              class="btn fw-bolder btn-outline-warning btn-lg"
+              style="font-size: 1rem"
+            >
+              <a href="./pages/daftar.html" class="text-decoration-none text-dark">Daftar</a>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4 pt-4 pb-4 bg-light">
+          <img
+            src="assets/img/homepage/hero-about.jpg"
+            alt="hero-about"
+            width="90%"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- HERO CONTENT END -->
+
+    <!-- SECTION SEARCH START -->
+    <section class="container my-5">
+      <div class="row d-flex justify-content-md-center justify-content-start">
+        <div class="col-xl-11 col-lg-12 ps-lg-0">
+          <label for="search">Cari Kuliner</label>
+        </div>
+
+        <div
+          class="col-xl-9 col-lg-10 col-md-9 col-sm-8 col-8 ps-md-0 pe-0 d-flex align-items-center"
+        >
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control py-3 fs-5 border-end-0"
+              placeholder="Search"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+              id="search"
+            />
+            <button
+              class="input-group-text px-4 border-start-0 bg-white"
+              id="basic-addon1"
+            >
+              <i class="bi bi-search fs-3"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-2 ps-1 ps-lg-2 ps-md-4 ps-sm-4 d-flex align-items-center"
+        >
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn btn-warning dropdown-toggle p-3 bg-orange text-white"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Pilih Tempat
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION SEARCH END -->
+
+    <!-- SECTION MENU START -->
+
+    <section
+    class="menu-section d-flex justify-content-between py-5 container bg-light"
+    id="menu"
+  >
+    <div id="cardList" class="row col-9 pe-5 pt-3 bg-light">
+    </div>
+
+    <div class="row col bg-light">
+      <div class="col-md-10 pt-5">
+        <div class="card bg-light">
+          <img
+            src="assets/img/homepage/artikelsatu.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h3 class="artikel-title fs-5 mt-3">
+              20 Tempat Nongki Murah Di Jakarta ternyata banyak tidak disangka
+              bahwa hal ini bisa ...
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 pt-5">
+        <div class="card bg-light">
+          <img
+            src="assets/img/homepage/artikelsatu.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h3 class="artikel-title fs-5 mt-3">
+              20 Tempat Nongki Murah Di Jakarta ternyata banyak tidak disangka
+              bahwa hal ini bisa ...
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 pt-5">
+        <div class="card bg-light">
+          <img
+            src="assets/img/homepage/artikelsatu.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h3 class="artikel-title fs-5 mt-3">
+              20 Tempat Nongki Murah Di Jakarta ternyata banyak tidak disangka
+              bahwa hal ini bisa ...
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- SECTION MENU END -->
+
+    <!-- SECTION PARTNER START -->
+    <section class="container py-5 bg-light mt-3" id="partner">
+      <div class="row justify-content-between p-1">
+        <div class="align-self-center col-md-6 pt-4">
+          <h2 class="fs-2 fw-semibold text-warning">
+            Ingin Menjual Produk Seperti Mereka?
+          </h2>
+          <h1 class="text-dark" style="font-size: 2.8rem; font-weight: 550">
+            Ayo Jadi Partner Kuyliner
+          </h1>
+          <p class="fs-6">
+            Dengan menjadi partner, kami akan membantu UMKM anda dengan cara
+            membagikan tempat kuliner anda.
+          </p>
+          <div id="button-hero-about">
+            <button
+              class="btn fw-bolder btn-warning btn-lg"
+              style="font-size: 1rem"
+            >
+              Daftar Jadi Partner
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4 pt-4 pb-4 bg-light">
+          <img
+            src="assets/img/homepage/logo-kuyliner.png"
+            alt="logokuyliner"
+            width="90%"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- SECTION PARTNER END -->
+
+    <!-- FOOTER START -->
+    <section
+      id="footer"
+      class="container-fluid py-4"
+      style="background-color: #232023"
+    >
+      <div class="container d-flex justify-content-between">
+        <div class="col-md-10">
+          <img
+            src="assets/img/homepage/logo-kuyliner.png"
+            alt="logokuyliner"
+            width="90rem"
+          />
+          <p>
+            Membagikan pengalaman terbaik bagi para <br />
+            UMKM dan Konsumen
+          </p>
+          <h3>Kontak Kami</h3>
+          <a href="#">kuylinerbusiness@gmail.com</a>
+          <p>+62 812 3123 782781</p>
+        </div>
+        <div id="logo-skilvul" class="col-md">
+          <img
+            src="assets/img/homepage/logo-skilvul.png"
+            alt="logo-skilvul"
+            width="80%"
+          />
+        </div>
+      </div>
+      <div
+        id="line"
+        class="container mb-2"
+        style="border-top: 2px solid #fff"
+      ></div>
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="col-md-10">
+          <p>
+            <i class="bi bi-c-circle"></i> 2023 Kuyliner. All rights reserved.
+            Made with <span><i class="bi bi-heart-fill"></i></span> in Indonesia
+          </p>
+        </div>
+        <div class="col-md d-flex gap-3">
+          <h2><i class="icon-footer bi bi-instagram"></i></h2>
+          <h2><i class="icon-footer bi bi-facebook"></i></h2>
+          <h2><i class="icon-footer bi bi-twitter-x"></i></h2>
+          <h2><i class="icon-footer bi bi-discord"></i></h2>
+          <h2><i class="icon-footer bi bi-telegram"></i></h2>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER END -->
+
+    <!-- BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="homepage.js"></script>
+  </body>
+</html>

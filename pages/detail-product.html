@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuyliner | Detail Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../assets/style/detail-product.css">
+  
+</head>
+<body class="overflow-x-hidden">
+
+  <header>
+    <nav
+    id="navbar"
+    class="navbar navbar-expand-lg navbar-light bg-light shadow-sm position-fixed z-3 w-100 top-0"
+  >
+    <div class="container">
+      <img
+        id="logo"
+        src="../assets/img/homepage/logo-kuyliner.png"
+        alt="logokuyliner"
+        width="90rem"
+      />
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Artikel</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  <main class="mt-5 pt-5">
+    <!-- Start Card Detail -->
+    <section class="container-xl container-md container-sm">
+      <div class="row card d-xl-flex justify-content-xl-center my-3">
+        <div id="section-detail-card" class="my-3">
+          <div class="row g-0">
+            <div class="col-xl-5 col-lg-6">
+              <img id="img-product" src="" class="img-fluid rounded h-100 w-100">
+            </div>
+            <div class="col-xl-7 col-lg-6">
+              <div class="card-body">
+                <h5 id="name-product" class="card-title fs-3 mb-3 fw-bold"></h5>
+                <p class="d-flex flex-row gap-2 mb-2">
+                  <!-- <span class="d-flex justify-content-center border border-black img-admin rounded-5">
+                    <img src="../assets/img/detail-product/profile-admin.png" class="w-100 object-fit-cover">
+                  </span> -->
+                  <span id="name-company" class="line-height fw-bolder"></span>
+                </p>
+                <p class="d-flex gap-1 align-content-center fs-6 m-0">
+                  <i class="bi bi-geo-alt fs-4"></i>
+                  <span id="company-location" class="line-height" ></span>
+                </p>
+                <div class="row">
+                  <div class="col-5 col-md-3 col-xl-5 col-lg-6">
+                    <p class="d-flex gap-1 align-content-center fs-6 m-0">
+                      <i class="bi bi-clock fs-4"></i>
+                      <span id="open-hour-company" class="line-height"></span>
+                    </p>
+                    <p class="d-flex gap-1 align-content-center fs-6 m-0">
+                      <i class="bi bi-cash-stack fs-4"></i>
+                      <span class="line-height">Rp.<span id="price-product"></span></span>
+                    </p>
+                  </div>
+                  <div class="col-5">
+                    <p class="d-flex gap-1 align-content-center fs-6 m-0">
+                      <i class="bi bi-calendar-date fs-4"></i>
+                      <span id="open-day-company" class="line-height"></span>
+                    </p>
+                    <p class="d-flex gap-1 align-content-center fs-6 m-0">
+                      <i class="bi bi-telephone fs-4"></i>
+                      <span id="number-phone-company" class="line-height"></span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row my-1">
+                  <div class="col">
+                    <div id="rating" class="rating-stars fs-2 d-inline mr-2">
+                      <!-- <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i> -->
+                    </div>
+                    <!-- <span class="fs-4">4.8/5</span> -->
+                  </div>
+                </div>
+
+                <div class="row mt-4 mt-md-2">
+                  <div class="col-12 d-flex justify-content-center d-md-block">
+                    <button type="button" class="btn btn-warning text-white border-0 px-4 py-2 bg-orange">Lihat Menu</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mb-4">
+          <iframe id="gmaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15841.973189575778!2d107.8228575!3d-6.9509891999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c561bd466d51%3A0xd2803279a5d5e520!2sPerumahan%20PUTERACO%20INDAH%20Cimanggung!5e0!3m2!1sid!2sid!4v1697029542606!5m2!1sid!2sid" height="450" class="w-100 rounded-2 border-1"></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- End Card Detail -->
+
+    <!-- Start Search Features -->
+    <section class="container my-5">
+      <div class="row d-flex justify-content-md-center justify-content-start">
+
+        <div class="col-xl-11 col-lg-12 ps-lg-0">
+          <label for="search">Cari Kuliner</label>
+        </div>
+
+        <div class="col-xl-9 col-lg-10 col-md-9 col-sm-8 col-8 ps-md-0 pe-0 d-flex align-items-center ">
+          <div class="input-group">
+            <input type="text" class="form-control py-3 fs-5 border-end-0" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1" id="search">
+            <button class="input-group-text px-4 border-start-0 bg-white" id="basic-addon1">
+              <i class="bi bi-search fs-3"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-2 ps-1 ps-lg-2 ps-md-4 ps-sm-4 d-flex align-items-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-warning dropdown-toggle p-3 bg-orange text-white" data-bs-toggle="dropdown" aria-expanded="false">
+              Pilih Tempat
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Search Features -->
+
+    <!-- Start Form Input Review -->
+    <section id="input-review" class="container my-5 card">
+      <div class="row p-5">
+        <div class="col-xl-2 col-md-3 col-5 p-0 text-center">
+          <img src="../assets/img/detail-product/profile-user.jpg" id="image-user" class="rounded-circle overflow-hidden size-profile">
+        </div>
+        <div class="col-xl-10 col-md-9 col-7 align-self-center">
+          <h3 class="m-0 fs-2" id="name-user">Guest</h3>
+        </div>
+        <div class="col-12 mt-4 align-self-center">
+          <h4 class="m-0">Beri Rating & Ulasan</h4>
+        </div>
+        <div class="col-12 my-2 align-self-center">
+          <label for="rating">
+            <input class="form-control" id="rating-star" type="radio" value="0"/>
+            
+            <i class="fs-2 bi bi-star-fill"></i>
+            <i class="fs-2 bi bi-star"></i>
+            <i class="fs-2 bi bi-star"></i>
+            <i class="fs-2 bi bi-star"></i>
+            <i class="fs-2 bi bi-star"></i>
+          </label>
+        </div>
+
+        <div class="col-12">
+          <textarea id="statement-user" class="form-control w-100" placeholder="Tuliskan Ulasanmu" style="height: 300px;"></textarea>
+        </div>
+
+        <div class="col-12 mt-3">
+          <button id="submit-review" type="submit" class="btn btn-warning px-5 py-2 text-white bg-orange">Kirim</button>
+        </div>
+      </div>
+    </section>
+    <!-- End Form Input Review -->
+
+    <!-- Start Reviewer -->
+    <section class="container my-5 pb-5">
+      <div class="row">
+        <div class="col-12">
+          <h3>Ulasan Pengunjung</h3>
+        </div>
+        <div class="col-12" >
+          <section class="container overflow-y-scroll border border-black rounded-bottom-1 border-top-0 py-2" style="height: 450px;">
+            <div class="row">
+
+              <!-- Start Card -->
+              <div class="col-12">
+                <div class="card mb-3">
+                  <div class="row g-0">
+
+                    <div class="col-5 text-center">
+                      <div class="card-body px-0">
+                        <div class="row">
+                          <div class="col-xl-3 col-12 px-0 ms-xl-5">
+                            <img src="../assets/img/detail-product/profile-user.jpg" class="img-fluid rounded-circle size-reviewer" />
+                          </div>
+                          <div class="col-xl-auto col-12 mt-xl-4 p-2">
+                            <div class="card-body p-0">
+                              <h4 class="card-title m-0 text-left fs-4">Asuma Toki</h4>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row my-xl-2 text-center align-self-center ">
+                          <div class="col-xl-5 ms-xl-4">
+                            <i class="bi bi-star fs-4"></i>
+                            <i class="bi bi-star fs-4"></i>
+                            <i class="bi bi-star fs-4"></i>
+                            <i class="bi bi-star fs-4"></i>
+                            <i class="bi bi-star fs-4"></i>
+                          </div>
+                          <div class="col-xl-auto col-12 p-0 m-0">
+                            <p class="m-0 text-left fs-5" style="line-height: 35px;">4/5</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xl-4 my-0 ms-xl-4">
+                            <p>11/09/2023</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-7">
+                      <div class="card-body ps-0">
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi inventore eos consequatur veritatis aut itaque perspiciatis dolores amet possimus aliquid magnam, rerum rem ipsa repellat sapiente deleniti pariatur voluptatibus. Fugit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eligendi soluta commodi nisi nobis harum, inventore eveniet quis numquam sed.</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Card -->
+
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- End Reviewer -->
+
+  </main>
+
+  <footer>
+    <section
+    id="footer"
+    class="container-fluid py-4"
+    style="background-color: #232023"
+  >
+    <div class="container d-flex justify-content-between text-white">
+      <div class="col-md-10">
+        <img
+          src="../assets/img/homepage/logo-kuyliner.png"
+          alt="logokuyliner"
+          width="90rem"
+        />
+        <p>
+          Membagikan pengalaman terbaik bagi para <br />
+          UMKM dan Konsumen
+        </p>
+        <h3 class="text-warning">Kontak Kami</h3>
+        <a href="#" class="text-decoration-none text-white">kuylinerbusiness@gmail.com</a>
+        <p>+62 812 3123 782781</p>
+      </div>
+      <div id="logo-skilvul" class="col-md">
+        <img
+          src="../assets/img/homepage/logo-skilvul.png"
+          alt="logo-skilvul"
+          width="80%"
+        />
+      </div>
+    </div>
+    <div
+      id="line"
+      class="container mb-2"
+      style="border-top: 2px solid #fff"
+    ></div>
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="col-md-10">
+        <p>
+          <i class="bi bi-c-circle"></i> 2023 Kuyliner. All rights reserved.
+          Made with <span><i class="bi bi-heart-fill"></i></span> in Indonesia
+        </p>
+      </div>
+      <div class="col-md d-flex gap-3">
+        <h2><i class="icon-footer bi bi-instagram text-white"></i></h2>
+        <h2><i class="icon-footer bi bi-facebook text-white"></i></h2>
+        <h2><i class="icon-footer bi bi-twitter-x text-white"></i></h2>
+        <h2><i class="icon-footer bi bi-discord text-white"></i></h2>
+        <h2><i class="icon-footer bi bi-telegram text-white"></i></h2>
+      </div>
+    </div>
+  </section>
+  </footer>
+  
+  
+
+  <script src="../assets/script/detail-product.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+<!-- 
+  <i class="bi bi-person-circle"></i>
+-->
