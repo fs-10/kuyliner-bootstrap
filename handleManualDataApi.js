@@ -221,3 +221,74 @@
     "id": "8"
   }
 ]
+
+
+// asd
+
+[
+  {
+    "createdAt": "2023-10-18T20:50:51.683Z",
+    "nameProduct": "Steak",
+    "emailCompany": "Clemens.Rau@yahoo.com",
+    "phoneCompany": "466-921-2543 x03089",
+    "openDayCompany": "Senin - Jumat",
+    "locationCompany": "Pocatello",
+    "nameCompany": "Kutch, Sauer and Funk",
+    "imageProduct": "./assets/img/img-products/steak.png",
+    "price": 88,
+    "rating": "⭐⭐⭐ 3.8/5.0",
+    "gmaps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15841.973189575778!2d107.8228575!3d-6.9509891999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c561bd466d51%3A0xd2803279a5d5e520!2sPerumahan%20PUTERACO%20INDAH%20Cimanggung!5e0!3m2!1sid!2sid!4v1697029542606!5m2!1sid!2sid",
+    "openHoursCompany": "08.00 - 21.00",
+    "reviewers": [],
+    "id": "1"
+  },
+  {
+    "createdAt": "2023-10-18T17:00:17.961Z",
+    "nameProduct": "Soto Ayam Kita",
+    "emailCompany": "Ike.Hegmann@gmail.com",
+    "phoneCompany": "1-502-249-2410 x19146",
+    "openDayCompany": "Senin - Sabtu",
+    "locationCompany": "Castro Valley",
+    "nameCompany": "Leffler and Sons",
+    "imageProduct": "./assets/img/img-products/soto-ayam-kita.png",
+    "price": 88,
+    "rating": "⭐⭐ 2.8/5.0",
+    "gmaps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15841.973189575778!2d107.8228575!3d-6.9509891999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c561bd466d51%3A0xd2803279a5d5e520!2sPerumahan%20PUTERACO%20INDAH%20Cimanggung!5e0!3m2!1sid!2sid!4v1697029542606!5m2!1sid!2sid",
+    "openHoursCompany": "07.00 - 22.00",
+    "reviewers": [],
+    "id": "2"
+  },
+  {
+    "createdAt": "2023-10-19T00:37:49.416Z",
+    "nameProduct": "Nasi Uduk Emak",
+    "emailCompany": "Ryder27@yahoo.com",
+    "phoneCompany": "(539) 274-9493 x3985",
+    "openDayCompany": "Senin - Minggu",
+    "locationCompany": "West Jordan",
+    "nameCompany": "Dach, Fisher and Koch",
+    "imageProduct": "./assets/img/img-products/nasi-uduk-emak.png",
+    "price": 49,
+    "rating": "⭐⭐⭐ 3.8/5.0",
+    "gmaps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15841.973189575778!2d107.8228575!3d-6.9509891999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c561bd466d51%3A0xd2803279a5d5e520!2sPerumahan%20PUTERACO%20INDAH%20Cimanggung!5e0!3m2!1sid!2sid!4v1697029542606!5m2!1sid!2sid",
+    "openHoursCompany": "08.00 - 23.00",
+    "reviewers": [],
+    "id": "3"
+  },
+  {
+    "createdAt": "2023-10-19T03:54:39.262Z",
+    "nameProduct": "Nasi Padang Kami",
+    "emailCompany": "Elwyn67@hotmail.com",
+    "phoneCompany": "709.202.8195 x16490",
+    "openDayCompany": "Senin - Jum'at",
+    "locationCompany": "Delano",
+    "nameCompany": "Halvorson - Murray",
+    "imageProduct": "./assets/img/img-products/nasi-padang-kami.png",
+    "price": 27,
+    "rating": "⭐⭐⭐⭐ 4.8/5.0",
+    "gmaps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15841.973189575778!2d107.8228575!3d-6.9509891999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c561bd466d51%3A0xd2803279a5d5e520!2sPerumahan%20PUTERACO%20INDAH%20Cimanggung!5e0!3m2!1sid!2sid!4v1697029542606!5m2!1sid!2sids",
+    "openHoursCompany": "08.00 - 23.00",
+    "reviewers": [],
+    "id": "4"
+  }
+]
+// asd

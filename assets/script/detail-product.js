@@ -1,14 +1,74 @@
-const labelRating = document.querySelector('label[for="rating"]');
-const getStarsRating = labelRating.getElementsByTagName('i');
 
-for (let i = 0; i < getStarsRating.length; i++) {
-  getStarsRating[i].addEventListener('click', () => {
 
-    getStarsRating[i].classList.replace('bi-star', 'bi-star-fill');
-    getStarsRating[i].classList.add('checked');
 
-  });
+function handleStarReviews() {
+  const labelRating = document.querySelector('label[for="rating"]');
+  const getStarsRating = labelRating.getElementsByTagName('i');
+  const rating = document.getElementById('rating-star');
+
+
+  for (let i = 0; i < getStarsRating.length; i++) {
+    getStarsRating[i].addEventListener('click', () => {
+
+      switch (i) {
+        case 0:
+          getStarsRating[0].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[1].classList.replace('bi-star-fill', 'bi-star');
+          getStarsRating[2].classList.replace('bi-star-fill', 'bi-star');
+          getStarsRating[3].classList.replace('bi-star-fill', 'bi-star');
+          getStarsRating[4].classList.replace('bi-star-fill', 'bi-star');
+          rating.value = 1;
+          break;
+
+        case 1:
+          getStarsRating[0].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[1].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[2].classList.replace('bi-star-fill', 'bi-star');
+          getStarsRating[3].classList.replace('bi-star-fill', 'bi-star');
+          getStarsRating[4].classList.replace('bi-star-fill', 'bi-star');
+          rating.value = 2;
+          break;
+
+        case 2:
+          getStarsRating[0].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[1].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[2].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[3].classList.replace('bi-star-fill', 'bi-star');
+          getStarsRating[4].classList.replace('bi-star-fill', 'bi-star');
+          rating.value = 3;
+          break;
+
+        case 3:
+          getStarsRating[0].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[1].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[2].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[3].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[4].classList.replace('bi-star-fill', 'bi-star');
+          rating.value = 4;
+          break;
+
+        case 4:
+          getStarsRating[0].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[1].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[2].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[3].classList.replace('bi-star', 'bi-star-fill');
+          getStarsRating[4].classList.replace('bi-star', 'bi-star-fill');
+          rating.value = 5;
+          break;
+
+
+        default:
+          rating.value = 1;
+          break;
+      }
+
+      console.log(rating.value);
+    });
+  }
 }
+
+handleStarReviews();
+
 
 const { search } = window.location;
 
@@ -26,8 +86,6 @@ function handleDomId() {
     gmaps: document.getElementById('gmaps')
   }
 }
-
-// console.log(handleDomId().rating);
 
 
 async function dataApi() {
