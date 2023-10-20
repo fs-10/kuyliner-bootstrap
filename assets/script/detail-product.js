@@ -71,7 +71,7 @@ handleStarReviews();
 
 const { search } = window.location;
 
-function handleDomId() {
+function handleSectionDetail() {
   return {
     imageProduct: document.getElementById('img-product'),
     nameProduct: document.getElementById('name-product'),
@@ -113,9 +113,12 @@ function handleDataUsers() {
 }
 
 
+
+
 // console.log(handleDataUsers().reviewStarUser.value);
 const submitReview = document.getElementById('submit-review');
 
+let counter = 1;
 submitReview.addEventListener('click', (event) => {
   event.preventDefault();
 
@@ -126,15 +129,45 @@ submitReview.addEventListener('click', (event) => {
   async function handlerFormReview() {
 
     const { search } = window.location;
+    // console.log(search);
+    const inputString = search;
+
+    // Ekspresi reguler untuk mencocokkan nomor setelah "?id="
+    const regex = /\?id=(\d+)/;
+
+    const match = regex.exec(inputString);
+    console.log(match[1]);
+
+    const date = new Date();
 
     try {
 
       const responseUser = await fetch(`https://6525feea67cfb1e59ce7cd5b.mockapi.io/users/${localStorage.getItem('id')}`);
       const dataUser = await responseUser.json();
-
       const { userName, img } = dataUser;
 
-      const responseProduct = await fetch(`https://6525feea67cfb1e59ce7cd5b.mockapi.io/products/${search}`, {
+      const response = await fetch(`https://6525feea67cfb1e59ce7cd5b.mockapi.io/products/${search}`);
+      const product = await response.json();
+
+      const {
+        imageProduct,
+        nameProduct,
+        nameCompany,
+        locationCompany,
+        openHoursCompany,
+        openDayCompany,
+        price,
+        phoneCompany,
+        rating,
+        gmaps,
+        createdAt,
+        emailCompany,
+        reviewers
+      } = product[0];
+
+      let { id } = reviewers[0];
+
+      const pushProduct = await fetch(`https://6525feea67cfb1e59ce7cd5b.mockapi.io/products/${match[1]}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -143,21 +176,34 @@ submitReview.addEventListener('click', (event) => {
           id: `${search}`,
           reviewers: [
             {
+              id: (id += 1),
               userName: `${userName}`,
               imgProfile: `${img}`,
-              starUser: [handleDataUsers().ratingStar.value],
-              statementUser: `${[handleDataUsers().statementUser.value]}`
-
-            }
-          ]
+              starUser: parseInt([handleDataUsers().ratingStar.value][0]),
+              statementUser: `${[handleDataUsers().statementUser.value]}`,
+              date: `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`,
+            },
+          ],
+          "createdAt": createdAt,
+          "nameProduct": nameProduct,
+          "emailCompany": emailCompany,
+          "phoneCompany": phoneCompany,
+          "openDayCompany": openDayCompany,
+          "locationCompany": locationCompany,
+          "nameCompany": nameCompany,
+          "imageProduct": imageProduct,
+          "price": price,
+          "rating": rating,
+          "gmaps": gmaps,
+          "openHoursCompany": openHoursCompany,
         }),
       });
 
-      if (!responseProduct.ok) {
+      if (!pushProduct.ok) {
         throw new Error('Error putting revewiers to the restourant');
       }
 
-      const updatedRestaurant = await responseProduct.json();
+      const updatedRestaurant = await pushProduct.json();
       console.log(`Reviewers added to the restourant`, updatedRestaurant);
 
 
@@ -186,25 +232,78 @@ async function dataApi() {
       price,
       phoneCompany,
       rating,
-      gmaps
+      gmaps,
+      reviewers
     } = product[0];
 
-    handleDomId().imageProduct.src = `.${imageProduct}`;
-    handleDomId().nameProduct.innerHTML = nameProduct;
-    handleDomId().nameCompany.innerHTML = nameCompany;
-    handleDomId().locationCompany.innerHTML = locationCompany;
+    handleSectionDetail().imageProduct.src = `.${imageProduct}`;
+    handleSectionDetail().nameProduct.innerHTML = nameProduct;
+    handleSectionDetail().nameCompany.innerHTML = nameCompany;
+    handleSectionDetail().locationCompany.innerHTML = locationCompany;
 
-    handleDomId().openDayCompany.innerHTML = openDayCompany;
-    handleDomId().openHoursCompany.innerHTML = openHoursCompany;
-    handleDomId().priceProduct.innerHTML = `${price}.000`;
-    handleDomId().phoneCompany.innerHTML = phoneCompany;
-    handleDomId().gmaps.src = `${gmaps}`;
-    handleDomId().rating.innerHTML = rating;
+    handleSectionDetail().openDayCompany.innerHTML = openDayCompany;
+    handleSectionDetail().openHoursCompany.innerHTML = openHoursCompany;
+    handleSectionDetail().priceProduct.innerHTML = `${price}.000`;
+    handleSectionDetail().phoneCompany.innerHTML = phoneCompany;
+    handleSectionDetail().gmaps.src = `${gmaps}`;
+    handleSectionDetail().rating.innerHTML = rating;
+
+
+    let cardReviewers = document.getElementById('card-reviewers');
+    reviewers.map(card => {
+      const { userName, imgProfile, starUser, statementUser, date } = card;
+      let cardReviews = `  <div class="col-12">
+      <div class="card mb-3">
+        <div class="row g-0">
+
+          <div class="col-5 text-center">
+            <div class="card-body px-0">
+              <div class="row">
+                <div class="col-xl-3 col-12 px-0 ms-xl-5">
+                  <img src="${imgProfile}" class="img-fluid rounded-circle size-reviewer" />
+                </div>
+                <div class="col-xl-auto col-12 mt-xl-4 p-2">
+                  <div class="card-body p-0">
+                    <h4 class="card-title m-0 text-left fs-4">${userName}</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row my-xl-2 text-center align-self-center ">
+                <div class="col-xl-5 ms-xl-4">
+                  <i class="bi bi-star-fill fs-4"></i>
+                </div>
+                <div class="col-xl-auto col-12 p-0 m-0">
+                  <p class="m-0 text-left fs-5" style="line-height: 35px;">${starUser}/5</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-4 my-0 ms-xl-4">
+                  <p>${date}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-7">
+            <div class="card-body ps-0">
+              <p class="card-text">${statementUser}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>`;
+
+      cardReviewers.innerHTML += cardReviews;
+    });
+
+
 
   } catch (err) {
     console.log(`Error ${err}`);
   }
 }
 
-
 dataApi();
+
