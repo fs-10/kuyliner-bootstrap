@@ -18,6 +18,8 @@ loginForm.addEventListener('submit', function (e) {
   const userInputData = getLoginFormData()
 
   // Fetch data untuk mendapatkan semua data user
+
+
   fetch("https://6525feea67cfb1e59ce7cd5b.mockapi.io/users", {
     method: "GET",
     headers: {
@@ -30,11 +32,13 @@ loginForm.addEventListener('submit', function (e) {
       }
     })
     .then(users => {
-      const isUserExist = users.find((user) => user.email == userInputData.email && user.password == userInputData.password)
+      const isUserExist = users.find((user) => user.email == userInputData.email && user.password == userInputData.password);
       if (isUserExist) {
-        window.location.replace("daftar.html");
+        window.location.replace("../index.html");
+        localStorage.setItem('id', users[0].id);
+
       } else {
-        alert('Email atau Password salah!')
+        alert('Email atau Password salah!');
       }
     })
 })

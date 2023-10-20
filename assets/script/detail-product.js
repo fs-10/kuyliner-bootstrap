@@ -4,8 +4,7 @@
 function handleStarReviews() {
   const labelRating = document.querySelector('label[for="rating"]');
   const getStarsRating = labelRating.getElementsByTagName('i');
-  const rating = document.getElementById('rating-star');
-
+  // const rating = document.getElementById('rating-star');
 
   for (let i = 0; i < getStarsRating.length; i++) {
     getStarsRating[i].addEventListener('click', () => {
@@ -17,7 +16,7 @@ function handleStarReviews() {
           getStarsRating[2].classList.replace('bi-star-fill', 'bi-star');
           getStarsRating[3].classList.replace('bi-star-fill', 'bi-star');
           getStarsRating[4].classList.replace('bi-star-fill', 'bi-star');
-          rating.value = 1;
+          handleDataUsers().ratingStar.value = 1;
           break;
 
         case 1:
@@ -26,7 +25,7 @@ function handleStarReviews() {
           getStarsRating[2].classList.replace('bi-star-fill', 'bi-star');
           getStarsRating[3].classList.replace('bi-star-fill', 'bi-star');
           getStarsRating[4].classList.replace('bi-star-fill', 'bi-star');
-          rating.value = 2;
+          handleDataUsers().ratingStar.value = 2;
           break;
 
         case 2:
@@ -35,7 +34,7 @@ function handleStarReviews() {
           getStarsRating[2].classList.replace('bi-star', 'bi-star-fill');
           getStarsRating[3].classList.replace('bi-star-fill', 'bi-star');
           getStarsRating[4].classList.replace('bi-star-fill', 'bi-star');
-          rating.value = 3;
+          handleDataUsers().ratingStar.value = 3;
           break;
 
         case 3:
@@ -44,7 +43,7 @@ function handleStarReviews() {
           getStarsRating[2].classList.replace('bi-star', 'bi-star-fill');
           getStarsRating[3].classList.replace('bi-star', 'bi-star-fill');
           getStarsRating[4].classList.replace('bi-star-fill', 'bi-star');
-          rating.value = 4;
+          handleDataUsers().ratingStar.value = 4;
           break;
 
         case 4:
@@ -53,16 +52,16 @@ function handleStarReviews() {
           getStarsRating[2].classList.replace('bi-star', 'bi-star-fill');
           getStarsRating[3].classList.replace('bi-star', 'bi-star-fill');
           getStarsRating[4].classList.replace('bi-star', 'bi-star-fill');
-          rating.value = 5;
+          handleDataUsers().ratingStar.value = 5;
           break;
 
 
         default:
-          rating.value = 1;
+          handleDataUsers().ratingStar.value = 1;
           break;
       }
 
-      console.log(rating.value);
+      console.log(handleDataUsers().ratingStar.value);
     });
   }
 }
@@ -87,11 +86,96 @@ function handleDomId() {
   }
 }
 
+async function showingUserProfile() {
+  try {
+
+    const responseUser = await fetch(`https://6525feea67cfb1e59ce7cd5b.mockapi.io/users/${localStorage.getItem('id')}`);
+    const dataUser = await responseUser.json();
+    const { userName, img } = dataUser;
+
+    handleDataUsers().nameUser.innerHTML = userName;
+    handleDataUsers().imageUser.src = img;
+
+  } catch (error) {
+    console.log(`Error ${error}`);
+  }
+}
+
+showingUserProfile();
+
+function handleDataUsers() {
+  return {
+    nameUser: document.getElementById('name-user'),
+    imageUser: document.getElementById('image-user'),
+    ratingStar: document.getElementById('rating-star'),
+    statementUser: document.getElementById('statement-user')
+  }
+}
+
+
+// console.log(handleDataUsers().reviewStarUser.value);
+const submitReview = document.getElementById('submit-review');
+
+submitReview.addEventListener('click', (event) => {
+  event.preventDefault();
+
+
+  console.log(handleDataUsers().statementUser.value);
+  console.log(handleDataUsers().ratingStar.value);
+
+  async function handlerFormReview() {
+
+    const { search } = window.location;
+
+    try {
+
+      const responseUser = await fetch(`https://6525feea67cfb1e59ce7cd5b.mockapi.io/users/${localStorage.getItem('id')}`);
+      const dataUser = await responseUser.json();
+
+      const { userName, img } = dataUser;
+
+      const responseProduct = await fetch(`https://6525feea67cfb1e59ce7cd5b.mockapi.io/products/${search}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id: `${search}`,
+          reviewers: [
+            {
+              userName: `${userName}`,
+              imgProfile: `${img}`,
+              starUser: [handleDataUsers().ratingStar.value],
+              statementUser: `${[handleDataUsers().statementUser.value]}`
+
+            }
+          ]
+        }),
+      });
+
+      if (!responseProduct.ok) {
+        throw new Error('Error putting revewiers to the restourant');
+      }
+
+      const updatedRestaurant = await responseProduct.json();
+      console.log(`Reviewers added to the restourant`, updatedRestaurant);
+
+
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  handlerFormReview();
+});
+
+
 
 async function dataApi() {
   try {
     const response = await fetch(`https://6525feea67cfb1e59ce7cd5b.mockapi.io/products/${search}`);
     const product = await response.json();
+
     const {
       imageProduct,
       nameProduct,
@@ -104,11 +188,6 @@ async function dataApi() {
       rating,
       gmaps
     } = product[0];
-
-    // const parseStringPrice = priceProduct.toString();
-    console.log(price)
-
-    console.log(product[0])
 
     handleDomId().imageProduct.src = `.${imageProduct}`;
     handleDomId().nameProduct.innerHTML = nameProduct;
@@ -126,5 +205,6 @@ async function dataApi() {
     console.log(`Error ${err}`);
   }
 }
+
 
 dataApi();
