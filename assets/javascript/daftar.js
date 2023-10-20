@@ -1,4 +1,4 @@
-function getSignUpFormData(){
+function getSignUpFormData() {
   let userName = document.getElementById('userName').value;
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
@@ -16,7 +16,7 @@ function getSignUpFormData(){
 const signUpForm = document.getElementById('signUpForm');
 
 // Lakukan semua perintah dibawah ketika signUpForm memiliki event submit
-signUpForm.addEventListener('submit', function(e){
+signUpForm.addEventListener('submit', function (e) {
   // Supaya ketika form disubmit tidak refresh
   e.preventDefault()
 
@@ -24,7 +24,7 @@ signUpForm.addEventListener('submit', function(e){
   const userInputData = getSignUpFormData()
 
   // Logika konfirmasi password apakah sama?
-  if(userInputData.password === userInputData.konfirmasiPassword){
+  if (userInputData.password === userInputData.konfirmasiPassword) {
     // Mempersiapkan data untuk dipass ke MockupAPI
     const newUser = {
       userName: userInputData.userName,
@@ -40,18 +40,18 @@ signUpForm.addEventListener('submit', function(e){
       },
       body: JSON.stringify(newUser),
     })
-    .then((res) => {
-      // Jika registrasi berhasil
-      if (res.ok) {
-        // Tampilkan alert registrasi berhasil
-        alert('Registrasi anda berhasil')
+      .then((res) => {
+        // Jika registrasi berhasil
+        if (res.ok) {
+          // Tampilkan alert registrasi berhasil
+          alert('Registrasi anda berhasil')
 
-        // Redirect ke login
-        setTimeout(() => {
-          window.location.replace("login.html");
-        }, 1500)
-      }
-    })
+          // Redirect ke login
+          setTimeout(() => {
+            window.location.replace("login.html");
+          }, 1500)
+        }
+      })
   } else {
     alert('Password tidak sama!')
   }
